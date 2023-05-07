@@ -6,7 +6,7 @@ import sys
 import socket
 from datetime import datetime
 
-ascii_banner = pyfiglet.figlet_format("PORT")
+ascii_banner = pyfiglet.figlet_format("CM-KRAZY")
 print(ascii_banner)
 
 target = input(str("IP: "))
