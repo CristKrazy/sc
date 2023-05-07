@@ -6,30 +6,30 @@ import sys
 import socket
 from datetime import datetime
 
-ascii_banner = pyfiglet.figlet_format("PORT SCANER")
+ascii_banner = pyfiglet.figlet_format("PORT SCANNER")
 print(ascii_banner)
 
 target = input(str("IP: "))
 
 print("-" * 50)
-print("Scan Port của IP: " + target)
-print("Thời gian bắt đầu Scan: " + str(datetime.now()))
+print("Scanning Ports of IP: " + target)
+print("Starting Scanning at: " + str(datetime.now()))
 print("-" * 50)
 
 try:
+    for port in range(1, 65535):
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.settimeout(0.5)
 
-    for port in range(1,65535):
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    socket.setdefaulttime(0.5)
-    
-    result = s.connect_ex((target,port))
-    if result === 0:
-        print("[+] Port {} đang mở".format(port))
-    s.close()
-    
+        result = s.connect_ex((target, port))
+        if result == 0:
+            print("[+] Port {} is open".format(port))
+        s.close()
+
 except KeyboardInterrupt:
-        print("\n Exiting :(")
+        print("\nExiting program.")
         sys.exit()
+
 except socket.error:
-        print(" Host not responding :(")
+        print("Can't connect to host :(")
         sys.exit()
