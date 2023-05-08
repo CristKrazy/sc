@@ -9,7 +9,7 @@ from datetime import datetime
 ascii_banner = pyfiglet.figlet_format("CM-KRAZY")
 print(ascii_banner)
 
-target = input(str("IP: "))
+target = input(str("[-] IP: "))
 
 print("-" * 50)
 print("Scanning Ports of IP: " + target)
@@ -23,7 +23,7 @@ try:
 
         result = s.connect_ex((target, port))
         if result == 0:
-            print("[+] Port {} is open".format(port))
+            print("[-] Port {} is open".format(port))
         s.close()
 
 except KeyboardInterrupt:
