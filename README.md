@@ -1,1 +1,2 @@
-# unavailable
+# setup command & usage
+"git clone"
