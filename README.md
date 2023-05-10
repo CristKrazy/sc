@@ -1,4 +1,4 @@
-# setup command & usage
+# usage
 
 git clone https://github.com/CristKrazy/scan-port
 
