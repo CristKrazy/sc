@@ -1,2 +1,7 @@
 # setup command & usage
-"git clone"
+
+git clone https://github.com/CristKrazy/scan-port
+
+cd scan-port
+
+python3 sc.py
