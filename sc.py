@@ -27,7 +27,7 @@ def scan_port(port):
 
 try:
     with ThreadPoolExecutor(max_workers=1000) as executor:
-        futures = [executor.submit(scan_port, port) for port in range(1, 65535)]
+        futures = [executor.submit(scan_port, port) for port in range(1, 100000)]
         for future in as_completed(futures):
             # wait for all tasks to finish
             pass
