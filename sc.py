@@ -26,14 +26,14 @@ def scan_port(port):
         s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         s.setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, 40960)
         s.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 40960)
-        s.settimeout(0.5)
+        s.settimeout(0.1)
         result = s.connect_ex((target, port))
         if result == 0:
             print(f'[-] Port {port} is open')
         s.close()
 
 try:
-    with ThreadPoolExecutor(max_workers=5000) as executor:
+    with ThreadPoolExecutor(max_workers=50000) as executor:
         futures = [executor.submit(scan_port, port) for port in range(1, 65536)]
         for future in as_completed(futures):
             pass
@@ -46,4 +46,4 @@ except socket.error:
     print('Can\'t connect to host :(')
     sys.exit()
 
-print('Done!')
+print('[-] End scanning.')
