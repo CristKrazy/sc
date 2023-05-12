@@ -1,3 +1,6 @@
+#TOOL SCAN PORT
+#Code by Krazy
+
 import pyfiglet
 import sys
 import socket
