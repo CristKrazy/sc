@@ -7,7 +7,7 @@ import socket
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-ascii_banner = pyfiglet.figlet_format("SCAN PORT")
+ascii_banner = pyfiglet.figlet_format("SCAN-PORT")
 print(ascii_banner)
 
 target = input(str("[-] IP: "))
