@@ -1,4 +1,5 @@
 # usage
+pip install pyfiglet
 
 git clone https://github.com/CristKrazy/scan-port
 
