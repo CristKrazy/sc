@@ -1,4 +1,6 @@
 # usage
+pip install setuptools
+
 pip install pyfiglet
 
 pip install colored
