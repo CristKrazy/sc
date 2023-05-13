@@ -7,7 +7,7 @@ import socket
 import itertools
 import time
 
-ascii_banner = pyfiglet.figlet_format('SCANER - PORT')
+ascii_banner = pyfiglet.figlet_format('PORT - SCANER')
 colored_banner = colored(ascii_banner, color='red')
 author_info = colored('version 0.1', color='cyan')
 version_info = colored('Code by Krazy', color='blue')
